@@ -1,68 +1,75 @@
 class CalculcadoraBinarios { 
 
-  import java.util.Scanner;
+	import java.util.Scanner;
 
-  public static void main(String[] args) {
-    running();
-  }
+	public static void main(String[] args) {
+    		running();
+  	}
 
-  public static void running() {
-    Scanner scan = new Scanner(System.in);
+  	public static void running() {
+    		Scanner scan = new Scanner(System.in);
   
-    System.out.println("Calculadora de binarios\n
-    Escolha um modo de entrada:\n
-    d - descimal\n
-    b - binario");
+    		System.out.println("Calculadora de binarios\n
+    		Escolha um modo de entrada:\n
+    		d - descimal\n
+    		b - binario");
   
-    bool entradaValida = false;
-    while(entradaValida = false) {
-      char modoEntrada = scan.next();
-      if(modoEntrada != 'd' && modoEntrada != 'b') {
-        System.out.println("Entrada invalida. Insira novamente.");
-        entradaValida = false;
-      }
-      else entradaValida = true;
-    }
+    		bool entradaValida = false;
+    		while(entradaValida = false) {
+      		char modoEntrada = scan.next();
+      		if(modoEntrada != 'd' && modoEntrada != 'b') {
+        		System.out.println("Entrada invalida. Insira novamente.");
+        		entradaValida = false;
+      		}
+      		else entradaValida = true;
   
-    Systm.out.println("
-    Escolha uma operacao:\n
-    1 - Soma de binarios int\n
-    2 - Subtracao de binarios int\n
-    3 - Multiplicacao de binarios int\n
-    4 - Divisao de binarios float\n
-    5 - Soma de binarios float\n
-    6 - Subtracao de binarios float\n
-    7 - Multiplicacao de binarios float\n
-    8 - Divisao de binarios float
-    ");
-  
-    int operacao = scan.nextInt();
+    		System.out.println("
+    		Escolha uma operacao:\n
+    		1 - Soma de binarios int\n
+    		2 - Subtracao de binarios int\n
+    		3 - Multiplicacao de binarios int\n
+    		4 - Divisao de binarios float\n
+    		5 - Soma de binarios float\n
+    		6 - Subtracao de binarios float\n
+    		7 - Multiplicacao de binarios float\n
+    		8 - Divisao de binarios float
+    		");
     
-    System.out.print("Insira o primeiro numero da operacao: ");
-    int num1 = scan.nextInt();
-    System.out.print("Insira o segundoo numero da operacao: ");
-    int num2 = scan.
-  }
+    		entradaValida = false;
+    		while(entradaValida = false) {
+			int operacao = scan.nextInt();
+			if(operacao < 1 || operacao > 8) {
+				System.out.println("Entrada invalida. Insira novamente.");
+				entradaValida = false;
+			}
+			else entradaValida = true;
+    		}
+    
+    		System.out.print("Insira o primeiro numero da operacao: ");
+    		int num1 = scan.nextInt();
+    		System.out.print("Insira o segundoo numero da operacao: ");
+    		int num2 = scan.
+  	}
 
-  public String converteDecimalEmBinario(int i) {
-    return Integer.toBinaryString(i);
-  }
-}
+	public String converteDecimalEmBinario(int i) {
+    		return Integer.toBinaryString(i);
+  	}
 
-  public static int[] maiorNumero(int[] a, int tamanhoArray) {
-	  int[] retorno = new int[tamanhoArray];
+  	public static int[] maiorNumero(int[] a, int tamanhoArray) {
+	  	int[] retorno = new int[tamanhoArray];
 	
-	  for(int i = 0; i < tamanhoArray; i++) retorno[i] = a[i];
+	  	for(int i = 0; i < tamanhoArray; i++) retorno[i] = a[i];
 
-	  return retorno;
-  }
+	  	return retorno;
+  	}
 
-  public static int[] somaDeInteiros(int[] a, int[] b) {
-	  int[] resposta = new int[tamMaiorNumero+1];
-	  for(int i = 0; i < tamMaiorNumero; i++) {
-		  int decretement = tamMaiorNumero;
-		  if(a[decrement-i] == 1 && b[decrement-i] == 1) {
-			  if(i == decrement)
-		  }
-	  }
-  }
+  	public static int[] somaDeInteiros(int[] a, int[] b) {
+	  	int[] resposta = new int[tamMaiorNumero+1];
+	  	for(int i = 0; i < tamMaiorNumero; i++) {
+		  	int decretement = tamMaiorNumero;
+		  	if(a[decrement-i] == 1 && b[decrement-i] == 1) {
+			  	if(i == decrement)
+		  	}
+	 	}
+  	}
+}
