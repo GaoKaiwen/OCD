@@ -4,10 +4,13 @@ public static void main(String[] args) {
   running();
 }
 
-
 public static void running() {
   Scanner scan = new Scanner(System.in);
   
-  System.out.println("");
+  System.out
   
+}
+
+public String converteDecimalEmBinario(int i) {
+  return Integer.toBinaryString(i);
 }
