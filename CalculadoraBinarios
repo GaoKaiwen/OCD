@@ -1,7 +1,6 @@
-import java.util.Scanner;
-import java.util.InputMismatchException;
-
 class CalculcadoraBinarios { 
+
+  import java.util.Scanner;
 
   public static void main(String[] args) {
     running();
@@ -15,7 +14,7 @@ class CalculcadoraBinarios {
     d - descimal\n
     b - binario");
   
-    boolean entradaValida = false;
+    bool entradaValida = false;
     while(entradaValida = false) {
       char modoEntrada = scan.next();
       if(modoEntrada != 'd' && modoEntrada != 'b') {
@@ -36,11 +35,8 @@ class CalculcadoraBinarios {
     7 - Multiplicacao de binarios float\n
     8 - Divisao de binarios float
     ");
-    
-    entradaVlida = false;
-    while(entradaValida = false) {
-      int operacao = scan.nextInt();
-      if(modoEntrada 
+  
+    int operacao = scan.nextInt();
     
     System.out.print("Insira o primeiro numero da operacao: ");
     int num1 = scan.nextInt();
@@ -52,3 +48,13 @@ class CalculcadoraBinarios {
     return Integer.toBinaryString(i);
   }
 }
+
+  public static somaDeInteiros(int[] a, int[] b) {
+	  int[] resposta = new int[tamMaiorNumero+1];
+	  for(int i = 0; i < tamMaiorNumero; i++) {
+		  int decretement = tamMaiorNumero;
+		  if(a[decrement-i] == 1 && b[decrement-i] == 1) {
+			  if(i == decrement)
+		  }
+	  }
+  }
