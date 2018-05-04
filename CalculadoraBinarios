@@ -1,16 +1,50 @@
-import java.util.Scanner;
+class CalculcadoraBinarios { 
 
-public static void main(String[] args) {
-  running();
-}
+  import java.util.Scanner;
 
-public static void running() {
-  Scanner scan = new Scanner(System.in);
+  public static void main(String[] args) {
+    running();
+  }
+
+  public static void running() {
+    Scanner scan = new Scanner(System.in);
   
-  System.out
+    System.out.println("Calculadora de binarios\n
+    Escolha um modo de entrada:\n
+    d - descimal\n
+    b - binario");
   
-}
+    bool entradaValida = false;
+    while(entradaValida = false) {
+      char modoEntrada = scan.next();
+      if(modoEntrada != 'd' && modoEntrada != 'b') {
+        System.out.println("Entrada invalida. Insira novamente.");
+        entradaValida = false;
+      }
+      else entradaValida = true;
+    }
+  
+    Systm.out.println("
+    Escolha uma operacao:\n
+    1 - Soma de binarios int\n
+    2 - Subtracao de binarios int\n
+    3 - Multiplicacao de binarios int\n
+    4 - Divisao de binarios float\n
+    5 - Soma de binarios float\n
+    6 - Subtracao de binarios float\n
+    7 - Multiplicacao de binarios float\n
+    8 - Divisao de binarios float
+    ");
+  
+    int operacao = scan.nextInt();
+    
+    System.out.print("Insira o primeiro numero da operacao: ");
+    int num1 = scan.nextInt();
+    System.out.print("Insira o segundoo numero da operacao: ");
+    int num2 = scan.
+  }
 
-public String converteDecimalEmBinario(int i) {
-  return Integer.toBinaryString(i);
+  public String converteDecimalEmBinario(int i) {
+    return Integer.toBinaryString(i);
+  }
 }
