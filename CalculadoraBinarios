@@ -49,7 +49,7 @@ class CalculcadoraBinarios {
   }
 }
 
-  public static somaDeInteiros(int[] a, int[] b) {
+  public static int[] somaDeInteiros(int[] a, int[] b) {
 	  int[] resposta = new int[tamMaiorNumero+1];
 	  for(int i = 0; i < tamMaiorNumero; i++) {
 		  int decretement = tamMaiorNumero;
