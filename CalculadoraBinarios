@@ -1,6 +1,7 @@
-class CalculcadoraBinarios { 
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
-  import java.util.Scanner;
+class CalculcadoraBinarios { 
 
   public static void main(String[] args) {
     running();
@@ -14,7 +15,7 @@ class CalculcadoraBinarios {
     d - descimal\n
     b - binario");
   
-    bool entradaValida = false;
+    boolean entradaValida = false;
     while(entradaValida = false) {
       char modoEntrada = scan.next();
       if(modoEntrada != 'd' && modoEntrada != 'b') {
@@ -35,8 +36,11 @@ class CalculcadoraBinarios {
     7 - Multiplicacao de binarios float\n
     8 - Divisao de binarios float
     ");
-  
-    int operacao = scan.nextInt();
+    
+    entradaVlida = false;
+    while(entradaValida = false) {
+      int operacao = scan.nextInt();
+      if(modoEntrada 
     
     System.out.print("Insira o primeiro numero da operacao: ");
     int num1 = scan.nextInt();
