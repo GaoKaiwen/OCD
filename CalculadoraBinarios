@@ -49,6 +49,14 @@ class CalculcadoraBinarios {
   }
 }
 
+  public static int[] maiorNumero(int[] a, int tamanhoArray) {
+	  int[] retorno = new int[tamanhoArray];
+	
+	  for(int i = 0; i < tamanhoArray; i++) retorno[i] = a[i];
+
+	  return retorno;
+  }
+
   public static int[] somaDeInteiros(int[] a, int[] b) {
 	  int[] resposta = new int[tamMaiorNumero+1];
 	  for(int i = 0; i < tamMaiorNumero; i++) {
