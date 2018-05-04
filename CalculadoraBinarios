@@ -1,1 +1,13 @@
+import java.util.Scanner;
 
+public static void main(String[] args) {
+  running();
+}
+
+
+public static void running() {
+  Scanner scan = new Scanner(System.in);
+  
+  System.out
+  
+}
