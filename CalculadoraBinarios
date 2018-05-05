@@ -145,7 +145,11 @@ class CalculadoraBinarios {
 	  	int[] retorno = new int[tamanhoArray];
 	
 	  	int i;
-	  	for(i = a.length-1; i > 0; i++) retorno[i] = a[i];
+	  	int j = retorno.length-1;
+	  	for(i = a.length-1; i > 0; i--) {
+	  		retorno[j] = a[i];
+	  		j--;
+	  	}
 	  	retorno[0] = a[i];
 	  	
 	  	return retorno;
