@@ -49,6 +49,7 @@ class CalculadoraBinarios {
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
 				resultado = somaDeInteiros(numero1, numero2);
+				break;
 
 			case 2: System.out.println("Subtraindo dois inteiros...");
 				System.out.print("Digite o primeiro numero: ");
@@ -58,6 +59,7 @@ class CalculadoraBinarios {
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
 				resultado = subtracaoDeInteiros(numero1, numero2);
+				break;
 
 			case 3: System.out.println("Multiplicando dois inteiros...");
 				System.out.print("Digite o primeiro numero: ");
@@ -67,6 +69,7 @@ class CalculadoraBinarios {
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
 				resultado = multiplicacaoDeInteiros(numero1, numero2);
+				break;
 				
 			case 4: System.out.println("Dividindo dois inteiros...");
 				System.out.print("Digite o primeiro numero: ");
@@ -76,6 +79,7 @@ class CalculadoraBinarios {
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
 				resultado = divisaoDeInteiros(numero1, numero2);
+				break;
 				
 			case 5: System.out.println("Somando dois flutuantes...");
 				System.out.print("Digite o primeiro numero: ");
@@ -85,6 +89,7 @@ class CalculadoraBinarios {
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
 				resultado = somaDeFloats(numero1, numero2);
+				break;
 				
 			case 6: System.out.println("Subtraindo dois flutuantes...");
 				System.out.print("Digite o primeiro numero: ");
@@ -94,6 +99,7 @@ class CalculadoraBinarios {
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
 				resultado = subtracaoDeFloats(numero1, numero2);
+				break;
 				
 			case 7: System.out.println("Multiplicando dois flutuantes...");
 				System.out.print("Digite o primeiro numero: ");
@@ -103,6 +109,7 @@ class CalculadoraBinarios {
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
 				resultado = multiplicacaoDeFloats(numero1, numero2);
+				break;
 				
 			case 8: System.out.println("Dividindo dois flutuantes...");
 				System.out.print("Digite o primeiro numero: ");
@@ -112,6 +119,7 @@ class CalculadoraBinarios {
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
 				resultado = divisaoDeFloats(numero1, numero2);
+				break;
 		}
 		for(int i = 0; i < resultado.length; i++) {
 			System.out.print("O resultado e " + resultado[i]);
