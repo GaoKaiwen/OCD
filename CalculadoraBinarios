@@ -15,13 +15,15 @@ class CalculadoraBinarios {
     		"b - binario");
   
     		boolean entradaValida = false;
+		String modoEntrada = "";
     		while(entradaValida = false) {
-      		String modoEntrada = scan.next();
-      		if(modoEntrada != "d" || modoEntrada != "b") {
-        		System.out.println("Entrada invalida. Insira novamente.");
-        		entradaValida = false;
-      		}
-      		else entradaValida = true;
+			modoEntrada = scan.next();
+      			if(modoEntrada != "d" || modoEntrada != "b") {
+        			System.out.println("Entrada invalida. Insira novamente.");
+        			entradaValida = false;
+      			}
+      			else entradaValida = true;
+		}
   
     		System.out.println("" +
     		"Escolha uma operacao:\n" +
@@ -35,8 +37,9 @@ class CalculadoraBinarios {
     		"8 - Divisao de binarios float");
     
     		entradaValida = false;
+		int operacao = 0;
     		while(entradaValida = false) {
-			int operacao = scan.nextInt();
+			operacao = scan.nextInt();
 			if(operacao < 1 || operacao > 8) {
 				System.out.println("Entrada invalida. Insira novamente.");
 				entradaValida = false;
@@ -44,18 +47,36 @@ class CalculadoraBinarios {
 			else entradaValida = true;
     		}
     
-    		int num1 = 0;
-    		int num2 = 0;
+    		String num1 = "";
+    		String num2 = "";
 		
-		switch(modoEntrada) {
+		switch(operacao) {
 			case 1: System.out.println("Somando dois binarios inteiros...");
-				System.out.print("Digite o primeiro número: ");
-				num1 = 
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.print("Digite o segundo numero: ");
+				num2 = scan.next();
 				
 		}
   	}
+  	
+  	public static int[] arranjo(String numero, String entrada) {
+  		int[] binario = null;
+  		if(entrada == "d") {
+  			if(Integer.parseInt(numero) < 0) binario[0] = 1;
+  			else binario[0] = 0;
+  			char[] array = numero.toCharArray();
+  			for(int i = 1; i <= numero.length(); i++) {
+  				binario[i] = Character.getNumericValue(array[i-1]);
+  			}
+  			return binario;
+  		}
+  		else {
+  			
+  		}
+  	}
 
-	public String converteDecimalEmBinario(int i) {
+	public static String converteDecimalEmBinario(int i) {
     		return Integer.toBinaryString(i);
   	}
 
