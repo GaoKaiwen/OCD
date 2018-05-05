@@ -1,6 +1,6 @@
-class CalculcadoraBinarios { 
+import java.util.Scanner;
 
-	import java.util.Scanner;
+class CalculadoraBinarios { 
 
 	public static void main(String[] args) {
     		running();
@@ -45,12 +45,14 @@ class CalculcadoraBinarios {
 			else entradaValida = true;
     		}
     
-    		System.out.print("Insira o primeiro numero da operacao: ");
     		int num1 = scan.nextInt();
-    		System.out.print("\nInsira o segundo numero da operacao: ");
     		int num2 = scan.nextInt();
 		
-		switch(
+		switch(modoEntrada) {
+			case 1: System.out.println("Somando dois binarios inteiros...");
+				System.out.print("Digite o primeiro número: ");
+				
+		}
   	}
 
 	public String converteDecimalEmBinario(int i) {
