@@ -60,19 +60,33 @@ class CalculadoraBinarios {
 		}
   	}
   	
-  	public static int[] arranjo(String numero, String entrada) {
+  	public static int[] arranjo(String numero, String entrada) {  //Transforma um número em arranjo
   		int[] binario = null;
-  		if(entrada == "d") {
+  		if(entrada == "d") {                                        //Se a entrada for em binario
   			if(Integer.parseInt(numero) < 0) binario[0] = 1;
   			else binario[0] = 0;
   			char[] array = numero.toCharArray();
-  			for(int i = 1; i <= numero.length(); i++) {
+  			for(int i = 1; i < numero.length(); i++) {
   				binario[i] = Character.getNumericValue(array[i-1]);
   			}
   			return binario;
   		}
-  		else {
-  			
+  		else {                                                       //Se a entrada for em decimal
+  			int decimal = Integer.parseInt(numero);
+        		int[] arrAux = null;
+       		 	int i = 0;
+        		while(decimal > 0) {
+          			if(decimal%2 == 0) arrAux[i] = 0;
+          			else arrAux[i] = 1;
+          			decimal /= 2;
+          			i++;
+        		}
+        		int j = arrAux.length() - 1;
+        		for(int k = 0; k < arrAux.length(); k++) {
+          			binario[k] = arrAux[j];
+          			j--;
+        		}
+        		return binario;
   		}
   	}
 
