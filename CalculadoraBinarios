@@ -21,7 +21,7 @@ class CalculadoraBinarios {
     		"7 - Multiplicacao de binarios float\n" +
     		"8 - Divisao de binarios float");
     
-    		entradaValida = false;
+    		boolean entradaValida = false;
 		int operacao = 0;
     		while(entradaValida = false) {
 			operacao = scan.nextInt();
@@ -36,7 +36,7 @@ class CalculadoraBinarios {
     		String num2 = "";
 		int[] numero1 = null;
 		int[] numero2 = null;
-		int resultado = 0;
+		int[] resultado = null;
 		switch(operacao) {
 			case 1: System.out.println("Somando dois binarios inteiros...");
 				System.out.print("Digite o primeiro numero: ");
@@ -110,15 +110,18 @@ class CalculadoraBinarios {
 				numero2 = floatToArray(num2);
 				resultado = divisaoDeFloats(numero1, numero2);
 		}
-		System.out.println("O resultado e " + resultado);
+		for(int i = 0; i < resultado.length; i++) {
+			System.out.print("O resultado e " + resultado[i]);
+		}
+		System.out.println("\n");
   	}
   	
-  	public static int[] stringIntToArray(String numero) {  //Transforma um número em arranjo
+  	public static int[] intToArray(String numero) {  //Transforma um número em arranjo
   		int[] binario = null;
   		int decimal = Integer.parseInt(numero);
         	int[] arrAux = null;
        		int i = 0;
-		if(Interger.parseInt(numero) < 0) binario[0] = 1;
+		if(Integer.parseInt(numero) < 0) binario[0] = 1;
       		else binario[0] = 0;
         	while(decimal > 0) {
           		if(decimal%2 == 0) arrAux[i] = 0;
@@ -126,19 +129,19 @@ class CalculadoraBinarios {
           		decimal /= 2;
           		i++;
         	}
-        	int j = arrAux.length() - 1;
-        	for(int k = 1; k <= arrAux.length(); k++) {
+        	int j = arrAux.length - 1;
+        	for(int k = 1; k <= arrAux.length; k++) {
           		binario[k] = arrAux[j];
           		j--;
         	}
         	return binario;
   	}
 
-	public static int[] stringFloatToArray(String numero) {
+	public static int[] floatToArray(String numero) {
 		
   	}
 
-  	public static int[] IgualarAoMaiorInt(int[] a, int tamanhoArray) {
+  	public static int[] maiorInt(int[] a, int tamanhoArray) {
 	  	int[] retorno = new int[tamanhoArray];
 	
 	  	for(int i = 0; i < tamanhoArray; i++) retorno[i] = a[i];
