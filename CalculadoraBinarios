@@ -141,7 +141,7 @@ class CalculadoraBinarios {
 		
   	}
 
-  	public static int[] maiorInt(int[] a, int tamanhoArray) {
+  	public static int[] IgualarAoMaiorInt(int[] a, int tamanhoArray) {
 	  	int[] retorno = new int[tamanhoArray];
 	
 	  	for(int i = 0; i < tamanhoArray; i++) retorno[i] = a[i];
