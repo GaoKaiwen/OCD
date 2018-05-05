@@ -14,7 +14,7 @@ class CalculadoraBinarios {
     		"d - descimal\n" +
     		"b - binario");
   
-    		bool entradaValida = false;
+    		boolean entradaValida = false;
     		while(entradaValida = false) {
       		char modoEntrada = scan.next();
       		if(modoEntrada != 'd' || modoEntrada != 'b') {
@@ -44,12 +44,13 @@ class CalculadoraBinarios {
 			else entradaValida = true;
     		}
     
-    		int num1 = scan.nextInt();
-    		int num2 = scan.nextInt();
+    		int num1 = 0;
+    		int num2 = 0;
 		
 		switch(modoEntrada) {
 			case 1: System.out.println("Somando dois binarios inteiros...");
 				System.out.print("Digite o primeiro número: ");
+				num1 = 
 				
 		}
   	}
