@@ -16,8 +16,8 @@ class CalculadoraBinarios {
   
     		boolean entradaValida = false;
     		while(entradaValida = false) {
-      		char modoEntrada = scan.next();
-      		if(modoEntrada != 'd' || modoEntrada != 'b') {
+      		String modoEntrada = scan.next();
+      		if(modoEntrada != "d" || modoEntrada != "b") {
         		System.out.println("Entrada invalida. Insira novamente.");
         		entradaValida = false;
       		}
