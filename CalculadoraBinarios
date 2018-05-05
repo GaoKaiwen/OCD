@@ -8,24 +8,9 @@ class CalculadoraBinarios {
 
   	public static void running() {
     		Scanner scan = new Scanner(System.in);
-  
-    		System.out.println("Calculadora de binarios\n" +
-    		"Escolha um modo de entrada:\n" +
-    		"d - descimal\n" +
-    		"b - binario");
-  
-    		boolean entradaValida = false;
-		String modoEntrada = "";
-    		while(entradaValida = false) {
-			modoEntrada = scan.next();
-      			if(modoEntrada != "d" || modoEntrada != "b") {
-        			System.out.println("Entrada invalida. Insira novamente.");
-        			entradaValida = false;
-      			}
-      			else entradaValida = true;
-		}
-  
+		
     		System.out.println("" +
+		"Calculadora de binarios\n" +
     		"Escolha uma operacao:\n" +
     		"1 - Soma de binarios int\n" +
     		"2 - Subtracao de binarios int\n" +
@@ -49,45 +34,104 @@ class CalculadoraBinarios {
     
     		String num1 = "";
     		String num2 = "";
-		
+		int[] numero1 = null;
+		int[] numero2 = null;
+		int resultado = 0;
 		switch(operacao) {
 			case 1: System.out.println("Somando dois binarios inteiros...");
 				System.out.print("Digite o primeiro numero: ");
 				num1 = scan.next();
-				System.out.print("Digite o segundo numero: ");
+				System.out.print("\nDigite o segundo numero: ");
 				num2 = scan.next();
+				numero1 = intToArray(num1);
+				numero2 = intToArray(num2);
+				resultado = somaDeInteiros(numero1, numero2);
+
+			case 2: System.out.println("Subtraindo dois inteiros...");
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.println("\nDigite o segundo numero: ");
+				num2 = scan.next();
+				numero1 = intToArray(num1);
+				numero2 = intToArray(num2);
+				resultado = subtracaoDeInteiros(numero1, numero2);
+
+			case 3: System.out.println("Multiplicando dois inteiros...");
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.println("\nDigite o segundo numero: ");
+				num2 = scan.next();
+				numero1 = intToArray(num1);
+				numero2 = intToArray(num2);
+				resultado = multiplicacaoDeInteiros(numero1, numero2);
 				
+			case 4: System.out.println("Dividindo dois inteiros...");
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.println("\nDigite o segundo numero: ");
+				num2 = scan.next();
+				numero1 = intToArray(num1);
+				numero2 = intToArray(num2);
+				resultado = divisaoDeInteiros(numero1, numero2);
+				
+			case 5: System.out.println("Somando dois flutuantes...");
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.println("\nDigite o segundo numero: ");
+				num2 = scan.next();
+				numero1 = floatToArray(num1);
+				numero2 = floatToArray(num2);
+				resultado = somaDeFloats(numero1, numero2);
+				
+			case 6: System.out.println("Subtraindo dois flutuantes...");
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.println("\nDigite o segundo numero: ");
+				num2 = scan.next();
+				numero1 = floatToArray(num1);
+				numero2 = floatToArray(num2);
+				resultado = subtracaoDeFloats(numero1, numero2);
+				
+			case 7: System.out.println("Multiplicando dois flutuantes...");
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.println("\nDigite o segundo numero: ");
+				num2 = scan.next();
+				numero1 = floatToArray(num1);
+				numero2 = floatToArray(num2);
+				resultado = multiplicacaoDeFloats(numero1, numero2);
+				
+			case 8: System.out.println("Dividindo dois flutuantes...");
+				System.out.print("Digite o primeiro numero: ");
+				num1 = scan.next();
+				System.out.println("\nDigite o segundo numero: ");
+				num2 = scan.next();
+				numero1 = floatToArray(num1);
+				numero2 = floatToArray(num2);
+				resultado = divisaoDeFloats(numero1, numero2);
 		}
+		System.out.println("O resultado e " + resultado);
   	}
   	
-  	public static int[] arranjo(String numero, String entrada) {  //Transforma um número em arranjo
+  	public static int[] intToArray(String numero) {  //Transforma um número em arranjo
   		int[] binario = null;
-  		if(entrada == "d") {                                        //Se a entrada for em binario
-  			if(Integer.parseInt(numero) < 0) binario[0] = 1;
-  			else binario[0] = 0;
-  			char[] array = numero.toCharArray();
-  			for(int i = 1; i < numero.length(); i++) {
-  				binario[i] = Character.getNumericValue(array[i-1]);
-  			}
-  			return binario;
-  		}
-  		else {                                                       //Se a entrada for em decimal
-  			int decimal = Integer.parseInt(numero);
-        		int[] arrAux = null;
-       		 	int i = 0;
-        		while(decimal > 0) {
-          			if(decimal%2 == 0) arrAux[i] = 0;
-          			else arrAux[i] = 1;
-          			decimal /= 2;
-          			i++;
-        		}
-        		int j = arrAux.length() - 1;
-        		for(int k = 0; k < arrAux.length(); k++) {
-          			binario[k] = arrAux[j];
-          			j--;
-        		}
-        		return binario;
-  		}
+  		int decimal = Integer.parseInt(numero);
+        	int[] arrAux = null;
+       		int i = 0;
+		if(Interger.parseInt(numero) < 0) binario[0] = 1;
+      		else binario[0] = 0;
+        	while(decimal > 0) {
+          		if(decimal%2 == 0) arrAux[i] = 0;
+          		else arrAux[i] = 1;
+          		decimal /= 2;
+          		i++;
+        	}
+        	int j = arrAux.length() - 1;
+        	for(int k = 1; k <= arrAux.length(); k++) {
+          		binario[k] = arrAux[j];
+          		j--;
+        	}
+        	return binario;
   	}
 
 	public static String converteDecimalEmBinario(int i) {
@@ -103,12 +147,6 @@ class CalculadoraBinarios {
   	}
 
   	public static int[] somaDeInteiros(int[] a, int[] b) {
-	  	int[] resposta = new int[tamMaiorNumero+1];
-	  	for(int i = 0; i < tamMaiorNumero; i++) {
-		  	int decretement = tamMaiorNumero;
-		  	if(a[decrement-i] == 1 && b[decrement-i] == 1) {
-			  	if(i == decrement)
-		  	}
-	 	}
+	  	
   	}
 }
