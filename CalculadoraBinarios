@@ -9,10 +9,10 @@ class CalculadoraBinarios {
   	public static void running() {
     		Scanner scan = new Scanner(System.in);
   
-    		System.out.println("Calculadora de binarios\n
-    		Escolha um modo de entrada:\n
-    		d - descimal\n
-    		b - binario");
+    		System.out.println("Calculadora de binarios\n" +
+    		"Escolha um modo de entrada:\n" +
+    		"d - descimal\n" +
+    		"b - binario");
   
     		bool entradaValida = false;
     		while(entradaValida = false) {
@@ -23,17 +23,16 @@ class CalculadoraBinarios {
       		}
       		else entradaValida = true;
   
-    		System.out.println("
-    		Escolha uma operacao:\n
-    		1 - Soma de binarios int\n
-    		2 - Subtracao de binarios int\n
-    		3 - Multiplicacao de binarios int\n
-    		4 - Divisao de binarios float\n
-    		5 - Soma de binarios float\n
-    		6 - Subtracao de binarios float\n
-    		7 - Multiplicacao de binarios float\n
-    		8 - Divisao de binarios float
-    		");
+    		System.out.println("" +
+    		"Escolha uma operacao:\n" +
+    		"1 - Soma de binarios int\n" +
+    		"2 - Subtracao de binarios int\n" +
+    		"3 - Multiplicacao de binarios int\n" +
+    		"4 - Divisao de binarios float\n" +
+    		"5 - Soma de binarios float\n" +
+    		"6 - Subtracao de binarios float\n" +
+    		"7 - Multiplicacao de binarios float\n" +
+    		"8 - Divisao de binarios float");
     
     		entradaValida = false;
     		while(entradaValida = false) {
