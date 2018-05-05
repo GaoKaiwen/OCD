@@ -113,7 +113,7 @@ class CalculadoraBinarios {
 		System.out.println("O resultado e " + resultado);
   	}
   	
-  	public static int[] intToArray(String numero) {  //Transforma um número em arranjo
+  	public static int[] stringIntToArray(String numero) {  //Transforma um número em arranjo
   		int[] binario = null;
   		int decimal = Integer.parseInt(numero);
         	int[] arrAux = null;
@@ -134,8 +134,8 @@ class CalculadoraBinarios {
         	return binario;
   	}
 
-	public static String converteDecimalEmBinario(int i) {
-    		return Integer.toBinaryString(i);
+	public static int[] stringFloatToArray(String numero) {
+		
   	}
 
   	public static int[] maiorInt(int[] a, int tamanhoArray) {
@@ -145,8 +145,40 @@ class CalculadoraBinarios {
 
 	  	return retorno;
   	}
+	
+	public static int[] maiorFloat(int[] a, int tamanhoArray) {
+	
+	}
 
   	public static int[] somaDeInteiros(int[] a, int[] b) {
+	  	
+  	}
+	
+	public static int[] subtracaoDeInteiros(int[] a, int[] b) {
+	
+	}
+	
+	public static int[] multiplicacaoDeInteiros(int[] a, int[] b) {
+	
+	}
+	
+	public static int[] divisaoDeInteiros(int[] a, int[] c) {
+	
+	}
+	
+	public static int[] somaDeFloats(int[] a, int[] b) {
+	  	
+  	}
+	
+	public static int[] subtracaoDeFloats(int[] a, int[] b) {
+	  	
+  	}
+	
+	public static int[] multiplicacaoDeFloats(int[] a, int[] b) {
+	  	
+  	}
+	
+	public static int[] divisaoDeFloats(int[] a, int[] b) {
 	  	
   	}
 }
