@@ -172,6 +172,10 @@ class CalculadoraBinarios {
 	public static int[] maiorFloat(int[] a, int tamanhoArray) {
 	
 	}
+	
+	public static int difTamanhoArr(int[] a, int[] b) {
+  		return a.length - b.length;
+  	}
 
   	public static int[] somaDeInteiros(int[] a, int[] b) {
   		int tamArr;
