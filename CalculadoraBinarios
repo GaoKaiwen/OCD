@@ -184,7 +184,7 @@ class CalculadoraBinarios {
   		int[] resposta = new int[tamArr];
   		int[] sobeUm = new int[tamArr];
   		if(a[0] == 0) {
-  			if(b[0] == 1) return resposta = subtracaoDeInteiros(a, b);			//a[0] == 0 && b[0] == 1
+  			if(b[0] == 1) return subtracaoDeInteiros(a, b);					//a[0] == 0 && b[0] == 1
   			else {										//a[0] == 0 && b[0] == 0
   				for(int i = tamArr; i > 0; i--) {					//soma bit por bit
   					if((a[i] == 1 && b[i] == 0) || (a[i] == 0 && b[i] == 1)) {
@@ -215,7 +215,7 @@ class CalculadoraBinarios {
   			}
   		}
   		else {
-  			if(b[0] == 0) return resposta = subtracaoDeInteiros(b, a);			//a[0] == 1 && b[0] == 0			
+  			if(b[0] == 0) return subtracaoDeInteiros(b, a);					//a[0] == 1 && b[0] == 0			
   			else {										//a[0] == 1 && b[0] == 1
   				for(int i = tamArr; i > 0; i--) {					//soma bit por bit
   					if((a[i] == 1 && b[i] == 0) || (a[i] == 0 && b[i] == 1)) {
