@@ -135,6 +135,7 @@ class CalculadoraBinarios {
   	
   	public static int[] intToArray(String numero) {  //Transforma um número em arranjo
   		int decimal = Integer.parseInt(numero);
+  		if(decimal < 0) decimal = -decimal;
         	ArrayList<Integer> arrAux = new ArrayList<Integer>();
        		int i = 0;
         	while(decimal > 0) {
@@ -151,12 +152,10 @@ class CalculadoraBinarios {
           		binario.add(k, arrAux.get(j));
           		j--;
         	}
-        	String[] saida = new String[binario.size()];
-        	saida = binario.toArray(saida);
-        	int[] saida1 = new int[saida.length];
-        	for(int l = 0; l < saida1.length; l++)
-			saida1[l] = Integer.parseInt(saida[l]);
-        	return saida1;
+        	int[] saida = new int[binario.size()];
+        	for(int k = 0; k < saida.length; k++)
+        		saida[k] = binario.get(k);
+        	return saida;
   	}
 
 	public static int[] floatToArray(String numero) {
