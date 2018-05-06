@@ -35,9 +35,9 @@ class CalculadoraBinarios {
     
     		String num1 = "";
     		String num2 = "";
-		int[] numero1 = null;
-		int[] numero2 = null;
-		int[] resultado = null;
+		int[] numero1 = new int[1];
+		int[] numero2 = new int[1];
+		int[] resultado = new int[1];
 		switch(operacao) {
 			case 1: System.out.println("Somando dois binarios inteiros...");
 				System.out.print("Digite o primeiro numero em decimal: ");
