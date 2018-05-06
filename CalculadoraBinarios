@@ -46,6 +46,8 @@ class CalculadoraBinarios {
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
+				if(difTamanhoArr(numero1, numero2) > 0) numero2 = IgualarAoMaiorInt(numero2, numero1.length);
+  				else numero1 = IgualarAoMaiorInt(numero1, numero2.length);
 				resultado = somaDeInteiros(numero1, numero2);
 				break;
 
@@ -56,6 +58,8 @@ class CalculadoraBinarios {
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
+				if(difTamanhoArr(numero1, numero2) > 0) numero2 = IgualarAoMaiorInt(numero2, numero1.length);
+  				else numero1 = IgualarAoMaiorInt(numero1, numero2.length);
 				resultado = subtracaoDeInteiros(numero1, numero2);
 				break;
 
@@ -66,6 +70,8 @@ class CalculadoraBinarios {
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
+				if(difTamanhoArr(numero1, numero2) > 0) numero2 = IgualarAoMaiorInt(numero2, numero1.length);
+  				else numero1 = IgualarAoMaiorInt(numero1, numero2.length);
 				resultado = multiplicacaoDeInteiros(numero1, numero2);
 				break;
 				
@@ -76,6 +82,8 @@ class CalculadoraBinarios {
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
+				if(difTamanhoArr(numero1, numero2) > 0) numero2 = IgualarAoMaiorInt(numero2, numero1.length);
+  				else numero1 = IgualarAoMaiorInt(numero1, numero2.length);
 				resultado = divisaoDeInteiros(numero1, numero2);
 				break;
 				
@@ -178,15 +186,7 @@ class CalculadoraBinarios {
   	}
 
   	public static int[] somaDeInteiros(int[] a, int[] b) {
-  		int tamArr;
-  		if(difTamanhoArr(a, b) > 0) {
-  			b = IgualarAoMaiorInt(b, a.length);
-  			tamArr = a.length;
-  		}
-  		else {
-  			a = IgualarAoMaiorInt(a, b.length);
-  			tamArr = b.length;
-  		}
+  		int tamArr = a.length;
   		
   		int[] resposta = new int[tamArr];
   		int[] sobeUm = new int[tamArr];
@@ -287,15 +287,7 @@ class CalculadoraBinarios {
   	}
   	
   	public static int[] subtracaoDeInteiros(int[] a, int[] b) {
-  		int tamArr;
-  		if(difTamanhoArr(a, b) > 0) {
-  			b = IgualarAoMaiorInt(b, a.length);
-  			tamArr = a.length;
-  		}
-  		else {
-  			a = IgualarAoMaiorInt(a, b.length);
-  			tamArr = b.length;
-  		}
+  		int tamArr = a.length;
   		
   		int[] resposta = new int[tamArr];
   		int[] resposta1 = new int[tamArr];
