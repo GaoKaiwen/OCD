@@ -191,9 +191,12 @@ class CalculadoraBinarios {
   		int[] resposta = new int[tamArr];
   		int[] sobeUm = new int[tamArr];
   		if(a[0] == 0) {
-  			if(b[0] == 1) return subtracaoDeInteiros(a, b);					//a[0] == 0 && b[0] == 1
-  			else {										//a[0] == 0 && b[0] == 0
-  				for(int i = tamArr; i > 0; i--) {					//soma bit por bit
+  			if(b[0] == 1) {														//a[0] == 0 && b[0] == 1
+  				b[0] = 0;
+  				return subtracaoDeInteiros(a, b);
+  			}
+  			else {																//a[0] == 0 && b[0] == 0
+  				for(int i = tamArr-1; i > 0; i--) {					//soma bit por bit
   					if((a[i] == 1 && b[i] == 0) || (a[i] == 0 && b[i] == 1)) {
   						if(sobeUm[i] == 0) resposta[i] = 1;
   						else sobeUm[i-1] = 1;
@@ -222,7 +225,10 @@ class CalculadoraBinarios {
   			}
   		}
   		else {
-  			if(b[0] == 0) return subtracaoDeInteiros(b, a);					//a[0] == 1 && b[0] == 0			
+  			if(b[0] == 0) {									//a[0] == 1 && b[0] == 0
+  				a[0] = 0;
+  				return subtracaoDeInteiros(b, a);			
+  			}
   			else {										//a[0] == 1 && b[0] == 1
   				for(int i = tamArr; i > 0; i--) {					//soma bit por bit
   					if((a[i] == 1 && b[i] == 0) || (a[i] == 0 && b[i] == 1)) {
@@ -255,8 +261,8 @@ class CalculadoraBinarios {
   			}
   		}
   	}
-	
-	public static int[] complemento2Int(int[] a) {
+  	
+  	public static int[] complemento2Int(int[] a) {
   		int[] retorno = new int[a.length];
   		
   		for(int i = 0; i < a.length; i++) {
@@ -273,10 +279,59 @@ class CalculadoraBinarios {
   		}
   		return retorno;
   	}
-	
-	public static int[] subtracaoDeInteiros(int[] a, int[] b) {
-	
-	}
+  	
+  	public static int valorInt(int[] a) {
+  		int resposta = 0;
+  		for(int i = 0; i < a.length; i++) resposta += Math.pow(10,i) * a[a.length - i - 1];
+  		return resposta;
+  	}
+  	
+  	public static int[] subtracaoDeInteiros(int[] a, int[] b) {
+  		int tamArr;
+  		if(difTamanhoArr(a, b) > 0) {
+  			b = IgualarAoMaiorInt(b, a.length);
+  			tamArr = a.length;
+  		}
+  		else {
+  			a = IgualarAoMaiorInt(a, b.length);
+  			tamArr = b.length;
+  		}
+  		
+  		int[] resposta = new int[tamArr];
+  		int[] resposta1 = new int[tamArr];
+  		if(a[0] == 0) {
+  			if(b[0] == 1) {									//a[0] == 0 && b[0] == 1
+  				b[0] = 0;
+  				return somaDeInteiros(a, b);
+  			}
+  			else {										//a[0] == 0 && b[0] == 0
+  				if(valorInt(a) >= valorInt(b)) {
+  					b[0] = 1;
+  					b = complemento2Int(b);
+  					resposta = somaDeInteiros(a, b);
+  					if(resposta.length == resposta1.length) return resposta;
+  					for(int i = tamArr-1; i > 0 ; i--) resposta1[i] = resposta[i+1];
+  					return resposta1;
+  				}
+  				else {
+  					resposta = subtracaoDeInteiros(b, a);
+  					resposta[0] = 1;
+  					return resposta;
+  				}
+  			}
+  		}
+  		else {
+  			if(b[0] == 0) {									//a[0] == 1 && b[0] == 0
+  				b[0] = 1;
+  				return somaDeInteiros(a, b);
+  			}
+  			else {										//a[0] == 1 && b[0] == 1
+  				a[0] = 0;
+  				b[0] = 0;
+  				return subtracaoDeInteiros(b, a);
+  			}
+  		}
+  	}
 	
 	public static int[] multiplicacaoDeInteiros(int[] a, int[] b) {
 	
