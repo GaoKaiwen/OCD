@@ -1,9 +1,4 @@
 import java.util.Scanner;
-
-class CalculadoraBinarios { 
-
-	private static int[] binario;
-	private static int[] arrAux;
 	
 	public static void main(String[] args) {
     		running();
@@ -127,25 +122,30 @@ class CalculadoraBinarios {
 		System.out.println("\n");
   	}
   	
-  	public static int[] intToArray(String numero) {  //Transforma uma string de um número em arranjo
-  		binario = null;
+  	public static int[] intToArray(String numero) {  //Transforma um número em arranjo
   		int decimal = Integer.parseInt(numero);
-        	arrAux = null;
+        	ArrayList<Integer> arrAux = new ArrayList<Integer>();
        		int i = 0;
-		if(Integer.parseInt(numero) < 0) binario[0] = 1;
-      		else binario[0] = 0;
         	while(decimal > 0) {
-          		if(decimal%2 == 0) arrAux[i] = 0;
-          		else arrAux[i] = 1;
+          		if(decimal%2 == 0) arrAux.add(i, 0);
+          		else arrAux.add(i, 1);
           		decimal /= 2;
           		i++;
         	}
-        	int j = arrAux.length - 1;
-        	for(int k = 1; k <= arrAux.length; k++) {
-          		binario[k] = arrAux[j];
+        	ArrayList<Integer> binario = new ArrayList<Integer>();
+        	if(Integer.parseInt(numero) < 0) binario.add(0, 1);
+      		else binario.add(0, 0);
+        	int j = arrAux.size() - 1;
+        	for(int k = 1; k <= arrAux.size(); k++) {
+          		binario.add(k, arrAux.get(j));
           		j--;
         	}
-        	return binario;
+        	String[] saida = new String[binario.size()];
+        	saida = binario.toArray(saida);
+        	int[] saida1 = new int[saida.length];
+        	for(int l = 0; l < saida1.length; l++)
+			saida1[l] = Integer.parseInt(saida[l]);
+        	return saida1;
   	}
 
 	public static int[] floatToArray(String numero) {
