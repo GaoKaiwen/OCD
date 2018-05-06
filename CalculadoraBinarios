@@ -171,7 +171,82 @@ class CalculadoraBinarios {
 	}
 
   	public static int[] somaDeInteiros(int[] a, int[] b) {
-	  	
+  		int tamArr;
+  		if(difTamanhoArr(a, b) > 0) {
+  			b = IgualarAoMaiorInt(b, a.length);
+  			tamArr = a.length;
+  		}
+  		else {
+  			a = IgualarAoMaiorInt(a, b.length);
+  			tamArr = b.length;
+  		}
+  		
+  		int[] resposta = new int[tamArr];
+  		int[] sobeUm = new int[tamArr];
+  		if(a[0] == 0) {
+  			if(b[0] == 1) return resposta = subtracaoDeInteiros(a, b);			//a[0] == 0 && b[0] == 1
+  			else {																//a[0] == 0 && b[0] == 0
+  				for(int i = tamArr; i > 0; i--) {								//soma bit por bit
+  					if((a[i] == 1 && b[i] == 0) || (a[i] == 0 && b[i] == 1)) {
+  						if(sobeUm[i] == 0) resposta[i] = 1;
+  						else sobeUm[i-1] = 1;
+  					}
+  					else {
+  						if(a[i] == 1 && b[i] == 1) {
+  							if(sobeUm[i] == 0) {
+  								resposta[i] = 0;
+  								sobeUm[i-1] = 1;
+  							}
+  							else {
+  								resposta[i] = 1;
+  								sobeUm[i-1] = 1;
+  							}
+  						}
+  					}
+  				}
+  				
+  				if(sobeUm[0] == 1) {
+  					int[] resposta1 = new int[tamArr+1];
+  	  				for(int i = 0; i < tamArr; i++) resposta1[i+1] = resposta[i];	//copia de resposta com um bit a mais
+  					resposta1[1] = 1;
+  					return resposta1;
+  				}
+  				return resposta;
+  			}
+  		}
+  		else {
+  			if(b[0] == 0) return resposta = subtracaoDeInteiros(b, a);			//a[0] == 1 && b[0] == 0			
+  			else {																//a[0] == 1 && b[0] == 1
+  				for(int i = tamArr; i > 0; i--) {								//soma bit por bit
+  					if((a[i] == 1 && b[i] == 0) || (a[i] == 0 && b[i] == 1)) {
+  						if(sobeUm[i] == 0) resposta[i] = 1;
+  						else sobeUm[i-1] = 1;
+  					}
+  					else {
+  						if(a[i] == 1 && b[i] == 1) {
+  							if(sobeUm[i] == 0) {
+  								resposta[i] = 0;
+  								sobeUm[i-1] = 1;
+  							}
+  							else {
+  								resposta[i] = 1;
+  								sobeUm[i-1] = 1;
+  							}
+  						}
+  					}
+  				}
+  				
+  				if(sobeUm[0] == 1) {
+  					int[] resposta1 = new int[tamArr+1];
+  	  				for(int i = 0; i < tamArr; i++) resposta1[i+1] = resposta[i];	//copia de resposta com um bit a mais
+  					resposta1[1] = 1;
+  					resposta1[0] = 1;
+  					return resposta1;
+  				}
+  				resposta[0] = 1;
+  				return resposta;
+  			}
+  		}
   	}
 	
 	public static int[] subtracaoDeInteiros(int[] a, int[] b) {
