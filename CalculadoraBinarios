@@ -127,8 +127,9 @@ class CalculadoraBinarios {
 				resultado = divisaoDeFloats(numero1, numero2);
 				break;
 		}
+		System.out.print("O resultado e: ");
 		for(int i = 0; i < resultado.length; i++) {
-			System.out.print("O resultado e " + resultado[i]);
+			System.out.print(resultado[i]);
 		}
 		System.out.println("\n");
   	}
