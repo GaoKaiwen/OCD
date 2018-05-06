@@ -42,9 +42,9 @@ class CalculadoraBinarios {
 		int[] resultado = null;
 		switch(operacao) {
 			case 1: System.out.println("Somando dois binarios inteiros...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.print("\nDigite o segundo numero: ");
+				System.out.print("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
@@ -52,9 +52,9 @@ class CalculadoraBinarios {
 				break;
 
 			case 2: System.out.println("Subtraindo dois inteiros...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.println("\nDigite o segundo numero: ");
+				System.out.println("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
@@ -62,9 +62,9 @@ class CalculadoraBinarios {
 				break;
 
 			case 3: System.out.println("Multiplicando dois inteiros...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.println("\nDigite o segundo numero: ");
+				System.out.println("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
@@ -72,9 +72,9 @@ class CalculadoraBinarios {
 				break;
 				
 			case 4: System.out.println("Dividindo dois inteiros...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.println("\nDigite o segundo numero: ");
+				System.out.println("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = intToArray(num1);
 				numero2 = intToArray(num2);
@@ -82,9 +82,9 @@ class CalculadoraBinarios {
 				break;
 				
 			case 5: System.out.println("Somando dois flutuantes...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.println("\nDigite o segundo numero: ");
+				System.out.println("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
@@ -92,9 +92,9 @@ class CalculadoraBinarios {
 				break;
 				
 			case 6: System.out.println("Subtraindo dois flutuantes...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.println("\nDigite o segundo numero: ");
+				System.out.println("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
@@ -102,9 +102,9 @@ class CalculadoraBinarios {
 				break;
 				
 			case 7: System.out.println("Multiplicando dois flutuantes...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.println("\nDigite o segundo numero: ");
+				System.out.println("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
@@ -112,9 +112,9 @@ class CalculadoraBinarios {
 				break;
 				
 			case 8: System.out.println("Dividindo dois flutuantes...");
-				System.out.print("Digite o primeiro numero: ");
+				System.out.print("Digite o primeiro numero em decimal: ");
 				num1 = scan.next();
-				System.out.println("\nDigite o segundo numero: ");
+				System.out.println("\nDigite o segundo numero em decimal: ");
 				num2 = scan.next();
 				numero1 = floatToArray(num1);
 				numero2 = floatToArray(num2);
