@@ -24,7 +24,7 @@ class CalculadoraBinarios {
     
     		boolean entradaValida = false;
 		int operacao = 0;
-    		while(entradaValida = false) {
+    		while(entradaValida == false) {
 			operacao = scan.nextInt();
 			if(operacao < 1 || operacao > 8) {
 				System.out.println("Entrada invalida. Insira novamente.");
