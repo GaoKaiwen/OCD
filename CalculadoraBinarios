@@ -249,6 +249,24 @@ class CalculadoraBinarios {
   		}
   	}
 	
+	public static int[] complemento2Int(int[] a) {
+  		int[] retorno = new int[a.length];
+  		
+  		for(int i = 0; i < a.length; i++) {
+  			if(a[i] == 1) retorno[i] = 0;
+  			else retorno[i] = 1;
+  		}
+  		
+  		for(int i = a.length-1; i > 0; i--) {
+  			if(retorno[i] == 0) {
+  				retorno[i] = 1;
+  				break;
+  			}
+  			else retorno[i] = 0;
+  		}
+  		return retorno;
+  	}
+	
 	public static int[] subtracaoDeInteiros(int[] a, int[] b) {
 	
 	}
