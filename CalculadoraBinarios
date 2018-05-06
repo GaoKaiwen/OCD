@@ -325,8 +325,44 @@ class CalculadoraBinarios {
   		}
   	}
 	
-	public static int[] multiplicacaoDeInteiros(int[] a, int[] b) {
-	
+	public static int[] multiplicacaoDeInteiros(int[] m, int[] q) { //Booth's algorithm
+		int[] array = new int[m.length*2 + 1]; //Inicializacao
+		int[] a = new int[m.length];
+		
+		for(int i = 0; i < a.length; i++) {
+			a[i] = 0;
+		}
+		for(int i = 0; i < m.length; i++) {
+			array[i] = 0;
+		}
+		int z = 0;
+		for(int i = m.length; i < m.length*2; i++) {
+			array[i] = q[z];
+			z++;
+		}
+		array[array.length-1] = 0;
+		/////////////////////////////////////// Fim na inicializacao
+		for(int i = 0; i < m.length; i++) {
+			if(array[m.length-2] < array[m.length-1]) {
+				a = somaDeInteiros(a, m);
+				for(int j = 0; j < a.length; j++) {
+					array[j] = a[j];
+				}
+			}
+			if(array[m.length-2] > array[m.length-1]) {
+				a = subtracaoDeInteiros(a, m);
+				for(int j = 0; j < a.length; j++) {
+					array[j] = a[j];
+				}
+			}
+			for(int j = array.length - 1; j > 0; j++) //shifting
+				array[j] = array[j-1];
+			array[0] = array[1];
+		}
+		int[] retorno = new int[array.length-1];
+		for(int i = 0; i < array.length-1; i++)
+			retorno[i] = array[i];
+		return retorno;
 	}
 	
 	public static int[] divisaoDeInteiros(int[] a, int[] c) {
