@@ -131,7 +131,7 @@ class CalculadoraBinarios {
 		for(int i = 0; i < resultado.length; i++) {
 			System.out.print(resultado[i]);
 		}
-		System.out.println("\n");
+		System.out.println("\nFim do programa.");
   	}
   	
   	public static int[] intToArray(String numero) {  //Transforma um número em arranjo
